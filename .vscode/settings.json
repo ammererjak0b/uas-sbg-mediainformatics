@@ -1,0 +1,11 @@
+{
+  "github.copilot.enabled": {
+    "*": false
+  },
+  "github.copilot.chat.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "extensions.unwantedRecommendations": [
+    "github.copilot",
+    "github.copilot-chat"
+  ]
+}
