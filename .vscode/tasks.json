@@ -4,9 +4,8 @@
         {
             "label": "make",
             "type": "shell",
-            "command": "make",
-            "args": ["CFLAGS=-g -Wall -Wextra"],
-            "options": { "cwd": "${fileDirname}" },
+            "command": "${workspaceFolder}/.vscode/build.sh",
+            "args": ["${fileDirname}"],
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": ["$gcc"]
         }
