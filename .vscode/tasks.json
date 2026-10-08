@@ -5,7 +5,7 @@
             "label": "make",
             "type": "shell",
             "command": "${workspaceFolder}/.vscode/build.sh",
-            "args": ["${fileDirname}"],
+            "args": ["${fileDirname}", "${file}"],
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": ["$gcc"]
         }
