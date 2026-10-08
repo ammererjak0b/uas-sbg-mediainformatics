@@ -1,11 +1,23 @@
-# a.cpp -> a.exe (name matches launch.json: fileBasenameNoExtension.exe)
-CXX      := g++
-CXXFLAGS ?= -std=c++17 -Wall -Wextra -g
+CXX ?= g++
+CXXFLAGS += -c -Wall
+LDFLAGS +=
 
-a.exe: a.cpp
-	$(CXX) $(CXXFLAGS) -o $@ a.cpp
+SRC = $(wildcard *.cpp)
+HDR = $(wildcard *.h)
+OBJ = $(SRC:.cpp=.o)
+
+all: Release
+
+Debug: CXXFLAGS += -g
+Debug: test
+
+Release: test
+
+test: $(OBJ)
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+%.o: %.cpp $(HDR)
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
-	rm -f a.exe
-
-.PHONY: clean
+	rm -f $(OBJ) test
