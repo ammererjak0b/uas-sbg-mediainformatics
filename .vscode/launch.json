@@ -7,6 +7,7 @@
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "cwd": "${fileDirname}",
+            "environment": [{ "name": "DISPLAY", "value": ":0" }], // imshow opens on the VM desktop, ssh has no display
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
             "preLaunchTask": "make",

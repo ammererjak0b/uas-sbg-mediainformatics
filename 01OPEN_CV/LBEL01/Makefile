@@ -8,7 +8,7 @@ NUM = #00
 
 #The task is only relevant for the Code::Blocks targets Debug and Release.
 #Change it if you want to build and debug/run a different task within Code::Blocks.
-TASK = a b
+TASK = a b c
 
 SRC = $(wildcard *.cpp)
 EXE = $(addprefix $(LAB)$(NUM), $(SRC:.cpp=.exe))
