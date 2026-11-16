@@ -1,0 +1,6 @@
+a: assets/intrinsics.yml assets/extrinsics.yml
+b: assets/left.png assets/right.png assets/intrinsics.yml assets/extrinsics.yml
+c: assets/left.png assets/right.png assets/intrinsics.yml assets/extrinsics.yml
+LBS03 a: assets/left.png assets/right.png assets/intrinsics.yml assets/extrinsics.yml
+LBS03 b: assets/left.png assets/right.png assets/intrinsics.yml assets/extrinsics.yml
+LBS03 c: assets/left.png assets/right.png assets/intrinsics.yml assets/extrinsics.yml

@@ -1,1 +1,1 @@
-assets/intrinsics.yml assets/extrinsics.yml
+assets/left.png assets/right.png assets/intrinsics.yml assets/extrinsics.yml
