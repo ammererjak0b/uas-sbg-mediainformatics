@@ -11,6 +11,7 @@
     - See LBS01b)
     - See "CameraParameter.hpp"
     - [AI-1]: Used Ai to explain in easy terms what the function "initUndistortRectifyMap" does. 
+    - [AI-2]: Helped with print function.
 - SOURCES: 
     - See LBS01b)
     - See "CameraParameter.hpp"
@@ -29,7 +30,7 @@
 #include "CameraParameters.hpp"
 #include <opencv2/imgproc.hpp> // remap
 
-void PrintThreeValidPoints(const cv::Mat& disparity, const cv::Mat& points3D, const cv::Mat& colorImage, const int minDisp);
+void printThreeValidPoints(const cv::Mat& disparity, const cv::Mat& points3D, const cv::Mat& colorImage, const int minDisp);
 int main(const int argc, const char * const argv[])
 {
     if(argc < 5){
@@ -110,11 +111,12 @@ int main(const int argc, const char * const argv[])
     cv::Mat points3D;
     cv::reprojectImageTo3D(disp32bit, points3D, disparityToDepth);  
     
-    PrintThreeValidPoints(disp32bit, points3D, leftRectified, minDisp);
+    printThreeValidPoints(disp32bit, points3D, leftRectified, minDisp);
 
     return 0;
 }
-void PrintThreeValidPoints(const cv::Mat& disparity, const cv::Mat& points3D, const cv::Mat& colorImage, const int minDisp)
+// [AI-2]
+void printThreeValidPoints(const cv::Mat& disparity, const cv::Mat& points3D, const cv::Mat& colorImage, const int minDisp)
 {
     int foundPoints = 0; // keeps count on how many points are printed
     for(int i = 0; i < disparity.rows; i += 100){ // every 100th pixel, so the points are not neighbours. This loop is for rows
