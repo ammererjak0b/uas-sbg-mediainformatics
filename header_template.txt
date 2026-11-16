@@ -1,0 +1,12 @@
+/*
+- AUTHOR: Jakob Ammerer
+- TASK: mytaska)
+- TODO: 
+   
+- AI USAGE: Claude Sonnet 5.5
+   
+- SOURCES: 
+ 
+- NOTES:
+ 
+*/
